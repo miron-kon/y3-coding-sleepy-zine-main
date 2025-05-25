@@ -1,0 +1,287 @@
+body{
+  font-family:Courier, monospace;
+  font-style: oblique;
+  color: #696c6e;
+  cursor: crosshair;
+}
+h1{
+  font-size: 100px;
+  font-family: "Louise-Regular", cursive; 
+  text-align: center;
+  transition: opacity 3s ease;
+}
+p{
+  transition: opacity 3s ease;
+}
+
+.issue1{
+  background-color: #D1D8DC;
+}
+.qa{
+  padding: 0px 5vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-row-gap: 30vh;
+}
+.question{
+  padding: 5vw;
+  grid-column: span 8;
+}
+.answer{
+  opacity: 0.1;
+  padding: 30px;
+  grid-column-end: span 3;
+}
+.q1{
+  padding-top: 40vh;
+}
+.a1{
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.a2{
+  grid-column-start: 5;
+  grid-row-start: 3;
+}
+.a3{
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+.a4{
+  grid-column-start: 6;
+  grid-row-start: 5;
+}
+.a5{
+  grid-column-start: 2;
+  grid-row-start: 6;
+}
+.a6{
+  grid-column-start: 5;
+  grid-row-start: 7;
+}
+.a7{
+  grid-column-start: 4;
+  grid-row-start: 8;
+}
+.a8{
+  grid-column-start: 1;
+  grid-row-start: 9;
+  margin-bottom: 30vh;
+}
+.q8{
+  grid-row-start: 10;
+}
+.a9{
+  grid-column-start: 1;
+  grid-row-start: 11;
+}
+.a10{
+  grid-column-start: 5;
+  grid-row-start: 12;
+}
+.a11{
+  grid-column-start: 3;
+  grid-row-start: 13;
+}
+.a12{
+  grid-column-start: 6;
+  grid-row-start: 14;
+}
+.a13{
+  grid-column-start: 2;
+  grid-row-start: 15;
+}
+.a14{
+  grid-column-start: 5;
+  grid-row-start: 16;
+}
+.a15{
+  grid-column-start: 4;
+  grid-row-start: 17;
+}
+.a16{
+  grid-column-start: 1;
+  grid-row-start: 18;
+  margin-bottom: 100vh;
+}
+.image{
+  max-width: 400px;
+  opacity: 0.4;
+}
+
+/* HOVER */
+.qa:hover .question{
+  opacity: 0.2;
+  cursor: none;
+}
+.answer:hover{
+  opacity: 0.8;
+  cursor: none;
+}
+h1:hover{
+  cursor: none;
+}
+
+/* TOGGLE */
+details{
+  transition: opacity 3s ease;
+}
+summary{
+  display: block;
+  cursor: pointer;
+}
+details:open > summary{
+  opacity: 0;
+  cursor:help;
+}
+details:open{
+  position: sticky;
+  top: -100px;
+}
+.d4{
+  padding-top: 25vh;
+}
+.d5{
+  padding-top: 50vh;
+}
+.d7{
+  padding-top: 35vh;
+}
+
+.issue2{
+  height: 300vh;
+}
+.switch{
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #3c3c3c;
+  color: #3c3c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  animation: bgColorChange linear;
+  animation-timeline: scroll();
+  animation-range: contain 0% contain 85%;
+}
+@keyframes bgColorChange{
+  0% {
+    background-color: #D1D8DC;
+    color: #696c6e;
+  }
+  100% {
+    background-color: #D1D8DC;
+    color: #696c6e;
+  }
+}
+
+.issue3{
+  height: 800vh;
+  max-height: 1000vh;
+  padding: 0px 10vw;
+  background-color: #3c3c3c;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(8, min-content);
+  grid-row-gap: 30vh;
+  place-items: center;
+}
+.neg{
+  filter: invert(100%);
+}
+.lyrics-l, .lyrics-r{
+  color: #ffffff9f;
+  opacity: 1;
+}
+.credits{
+  font-style:normal;
+}
+.bubble{
+  max-width: 50vw;
+  place-self: stretch;
+  opacity: 0.4;
+}
+.b-left{
+  transform: scale(-1);
+}
+.lyrics-r{
+  padding: 0 10% 0 30%;
+}
+.lyrics-l{
+  padding: 0 30% 0 10%;
+}
+.button-content{
+  padding: 0 20% 10% 20%;
+}
+.b1, .l1{
+  grid-column: 2;
+  grid-row: 1;
+}
+.b2, .l2{
+  grid-column: 1;
+  grid-row: 2;
+}
+.b3, .l3{
+  grid-column: 2;
+  grid-row: 3;
+}
+.b4, .l4{
+  grid-column: 1;
+  grid-row: 4;
+}
+.b5, .l5{
+  grid-column: 2;
+  grid-row: 5;
+}
+.b6, .l6{
+  grid-column: 1;
+  grid-row: 6;
+}
+
+.button-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.button .button-checkbox:checked ~ .button-content {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 100%;
+  cursor:none;
+}
+.button-checkbox:checked {
+  height: 50px;
+}
+.button-checkbox {
+  all: unset;
+  position:relative;
+  width: 350px;
+  max-width: 50vw;
+  height: 350px;
+  z-index: 2;
+  cursor: help;
+}
+
+.play-intro{
+  color: #D1D8DC 40%;
+  grid-column: span 2;
+  margin-top: 40vh;
+}
+.playlist{
+  grid-column: span 2;
+  margin-top: -20vh;
+}
+
+/* ON RESIZE */
+@media screen and (max-height: 480px){
+  .question {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 780px){
+  .question {
+    font-size: 50px;
+  }
+}

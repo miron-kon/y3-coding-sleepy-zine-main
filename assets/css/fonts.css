@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Louise-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+  src: url("../fonts/Louise-Regular.woff") format("woff"), url("../fonts/Louise-Regular.woff2") format("woff2");
+}
